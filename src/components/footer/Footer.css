@@ -1,0 +1,11 @@
+
+.footer {
+    background: #1F1F1F;
+}
+
+
+@media (max-width: 575px){
+.footer p{
+    font-size: 12px;
+}
+}

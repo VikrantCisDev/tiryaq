@@ -1,0 +1,11 @@
+.sub-title{
+    color: #0CBDBD;
+}
+
+
+@media (max-width:767px){
+    .imgTxtSection .col-md-6 img {
+        max-width: 460px;
+        width: 100%;
+    }
+}

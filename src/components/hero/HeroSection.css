@@ -1,0 +1,167 @@
+.HeroSection {
+    position: relative;
+    background-image: url("../../assets/hero-bg.png");
+    overflow: hidden;
+}
+
+.HeroSection::before {
+    content: "";
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: -250px;
+    transform: translateX(-50%);
+    background: #c4f7f7;
+    filter: blur(320px);
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.heroTopWrapper {
+    width: 100%;
+    max-width: 975px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hoverImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.HeroSection h1 {
+    font-size: 56px;
+    font-weight: 500;
+}
+
+.LeftHoverImage1 {
+    left: 0;
+    /* animation: slideFromLeft 0.7s 0.1s 1 ease-in-out; */
+}
+
+.LeftHoverImage1.LeftHoverImage2 {
+    /* animation: slideFromLeft 0.7s 0.2s 1 ease-in-out; */
+}
+
+.RightHoverImage1 {
+    right: 0;
+    left: auto;
+    /* animation: slideFromRight 0.7s 0.1s 1 ease-in-out; */
+}
+
+.RightHoverImage1.RightHoverImage2 {
+    /* animation: slideFromRight 0.7s 0.2s 1 ease-in-out; */
+}
+
+.mobMed {
+    /* animation: mobMedDown linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%; */
+    /* animation: mobMedDown 0.6s 1 linear; */
+}
+
+.mobCenter {
+    /* animation: mobCenterDown 0.7s 1 linear; */
+}
+
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes mobMedDown {
+    0% {
+        transform: translateY(100px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes mobCenterDown {
+    0% {
+        transform: translateY(200px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1440px) {
+    .hoverImage {
+        max-width: 260px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hoverImage {
+        max-width: 240px;
+        top: -7%;
+    }
+}
+
+@media (max-width: 992px) {
+    .HeroSection h1 {
+        font-size: 40px;
+    }
+
+    .hoverImage {
+        max-width: 200px;
+        top: -9%;
+    }
+}
+
+@media (max-width: 767px) {
+    .hoverImage {
+        display: none;
+        max-width: 160px;
+    }
+    .mobCenter {
+    min-width: 55vw;
+    width: 100%;
+    }
+    .mobMed {
+    min-width: 45vw;
+    width: 100%;
+    }
+
+    .HeroSection h1 {
+        font-size: 30px;
+    }
+
+    .RightHoverImage1:not(.RightHoverImage2) {
+    rotate: 40deg;
+    right: -9%;
+}
+
+}

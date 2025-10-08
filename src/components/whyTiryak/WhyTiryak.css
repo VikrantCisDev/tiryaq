@@ -1,0 +1,78 @@
+.imgCol {
+  position: relative;
+}
+
+
+.hoverImg {
+  position: absolute;
+}
+
+.hoverImg1 {
+  top: 20%;
+  left: 0;
+  animation: float 3s ease-in-out infinite;
+}
+
+.hoverImg2 {
+  top: 22%;
+  right: 14%;
+  animation: float 3s ease-in-out infinite;
+}
+
+.hoverImg3 {
+  bottom: 13%;
+  right: 2%;
+  animation: float2 3s ease-in-out infinite;
+}
+
+.hoverImg4 {
+  left: 7%;
+  bottom: 20%;
+  animation: float2 3s ease-in-out infinite;
+}
+
+
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width:1360px) {
+  .hoverImg1 {
+    max-width: 44%;
+  }
+
+  .hoverImg2 {
+    max-width: 26%;
+  }
+
+  .hoverImg3,
+  .hoverImg4 {
+    max-width: 46%;
+  }
+}

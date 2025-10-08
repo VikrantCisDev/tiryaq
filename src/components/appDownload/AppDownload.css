@@ -1,0 +1,33 @@
+.appDownloadSection {
+  background: url("../../assets/appDownloadBg.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.qrBox {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.ad_centerCol {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+@media (max-width: 767px) {
+  .ad_centerCol {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .custom-swiper-two .swiper::before,
+  .custom-swiper-two .swiper::after {
+    width: 30px;
+  }
+}
+
+@media (max-width: 475px) {
+  .adHalf_img img {
+    width: 100%;
+    max-width: 250px;
+  }
+}
